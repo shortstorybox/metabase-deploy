@@ -7,6 +7,6 @@ METABASE_VERSION="v1.44.0"
 METABASE_URL="https://github.com/shortstorybox/metabase/releases/download/$METABASE_VERSION/metabase.jar"
 mkdir -p "$1/target/uberjar"
 
-echo -n "-----> Downloading Metabase... from $METABASE_URL to $METABASE_JAR"
+echo -n "-----> Downloading Metabase... from $METABASE_URL to $METABASE_JAR..."
 curl -s --retry 3 -o $METABASE_JAR -L $METABASE_URL
 echo "done"
