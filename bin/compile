@@ -3,7 +3,7 @@
 set -eu
 
 METABASE_JAR="$1/target/uberjar/metabase.jar"
-METABASE_VERSION="v1.44.0-shortstory-patch-4"
+METABASE_VERSION="v1.44.0-shortstory-patch-5"
 METABASE_URL="https://github.com/shortstorybox/metabase/releases/download/$METABASE_VERSION/metabase.jar"
 mkdir -p "$1/target/uberjar"
 
