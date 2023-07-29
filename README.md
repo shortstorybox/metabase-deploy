@@ -3,22 +3,22 @@
  - To rebase our patches with new Metabase code, run the following in the
    `metabase` repository. (That's a different GitHub repository from this one):
 
-     $ git fetch upstream
-     $ git rebase --onto upstream/master master shortstory-patches
-     $ git switch master && git merge --ff-only upstream/master && git switch shortstory-patches
-     $ git push origin master shortstory-patches
+       $ git fetch upstream
+       $ git rebase --onto upstream/master master shortstory-patches
+       $ git switch master && git merge --ff-only upstream/master && git switch shortstory-patches
+       $ git push origin master shortstory-patches
 
  - To run metabase locally, run the following. But be careful! This uses the
    production database that stores all our Metabase settings:
 
-     $ cd ../metabase-deploy && ln -s ../metabase/target ./target
-     $ cd ../metabase && bin/build && cd ../metabase-deploy && env -S "$(heroku config --shell --app shortstory-metabase-dev)" bin/start
+       $ cd ../metabase-deploy && ln -s ../metabase/target ./target
+       $ cd ../metabase && bin/build && cd ../metabase-deploy && env -S "$(heroku config --shell --app shortstory-metabase-dev)" bin/start
 
  - To make a new release, run the following in the `metabase` repository:
 
-     $ bin/build
-     $ git tag v1.44.3-shortstory-patch-2   # (or whatever the current patch name should be)
-     $ git push origin --tags
+       $ bin/build
+       $ git tag v1.44.3-shortstory-patch-4   # (or whatever the current patch name should be)
+       $ git push origin --tags
 
    Then create a new release at
    https://github.com/shortstorybox/metabase/releases and attach the newly
